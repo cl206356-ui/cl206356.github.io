@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="escudo_corithians.png">
+  <title>Cadastro de Torcedor | Coringão</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', 'Trebuchet MS', sans-serif;
+      background-color: rgb(240, 240, 240);
+      min-height: 100vh;
+      color: #111;
+      line-height: 1.5;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 10px 18px;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 5px solid rgb(59, 59, 53);
+    }
+
+    header img {
+      width: 50px;
+      height: auto;
+      transition: transform 0.5s ease;
+    }
+
+    header img:hover {
+      transform: rotate(180deg);
+    }
+
+    header h2 {
+      margin: 0 8px;
+    }
+
+    .link {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 8px;
+    }
+
+    .link a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.25s;
+    }
+
+    .link a:hover,
+    .link a:focus-visible {
+      text-decoration: underline;
+      color: rgb(190, 190, 190);
+    }
+
+    main {
+      margin: 20px auto;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .conteudo {
+      margin: 10px;
+      padding: 18px;
+      background-color: #fff;
+      width: min(750px, 100%);
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgb(0 0 0 / 8%);
+    }
+
+    .titulo {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      min-height: 40px;
+      width: 100%;
+      padding: 8px 10px;
+      background-color: rgb(219, 219, 219);
+      border-bottom: 2px solid rgb(110, 110, 110);
+      border-radius: 3px 3px 0 0;
+    }
+
+    form {
+      margin: 10px 0 20px;
+      width: 100%;
+    }
+
+    label {
+      display: inline-block;
+      margin-bottom: 3px;
+    }
+
+    input:not([type="radio"]):not([type="submit"]),
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      font: inherit;
+      background-color: #fff;
+    }
+
+    input[type="number"] {
+      max-width: 130px;
+    }
+
+    input[type="radio"] {
+      margin: 0 5px 0 0;
+      accent-color: #111;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: 2px solid #555;
+      outline-offset: 1px;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    input[type="submit"] {
+      width: auto;
+      padding: 8px 18px;
+      background-color: #000;
+      color: #fff;
+      border: 1px solid #000;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font: inherit;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #444;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .bolder {
+      font-weight: 800;
+    }
+
+    .marker {
+      margin: 8px 0 18px 22px;
+      padding-left: 8px;
+    }
+
+    .marker li {
+      margin: 5px 0;
+      padding-left: 3px;
+    }
+
+    .marker li::marker {
+      color: #d71920;
+      font-weight: 800;
+    }
+
+    .observacao {
+      padding: 12px;
+      background: #f3f3f3;
+      border-left: 4px solid #222;
+      border-radius: 4px;
+      margin: 8px 0 15px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        position: static;
+      }
+
+      header h2 {
+        font-size: 1.2rem;
+      }
+
+      .link {
+        width: 100%;
+        gap: 10px;
+      }
+
+      main {
+        margin: 8px auto;
+        padding: 6px;
+      }
+
+      .conteudo {
+        margin: 4px;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <img src="escudo_corithians.png" alt="Escudo do Corinthians">
+    <h2>Coringão</h2>
+    <p aria-hidden="true" style="font-size: 30px;">|</p>
+
+    <nav class="link" aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="index.html#tra">Trajetória</a>
+      <a href="index.html#art">Artilharia</a>
+      <a href="index.html#es">Estatística</a>
+      <a href="cadastro.html" aria-current="page">Cadastro</a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo da página -->
+  <main>
+    <div class="conteudo">
+      <section aria-labelledby="titulo-cadastro">
+        <div class="titulo">
+          <h3 id="titulo-cadastro">Cadastro de Torcedor</h3>
+        </div>
+
+        <p class="observacao italic">
+          Preencha os campos abaixo para registrar seus dados como torcedor.
+          Os campos marcados como obrigatórios precisam ser preenchidos.
+        </p>
+
+        <form action="#" method="get">
+          <label for="nome"><span class="bolder">Nome completo:</span></label><br>
+          <input type="text" name="nome" id="nome" minlength="3" autocomplete="name" required>
+
+          <br><br>
+
+          <label for="idade"><span class="bolder">Idade:</span></label><br>
+          <input type="number" name="idade" id="idade" min="1" max="120" required>
+
+          <br><br>
+
+          <span class="bolder">Sexo:</span><br>
+          <input type="radio" name="sexo" id="sexo-m" value="M" checked>
+          <label for="sexo-m">Masculino</label>
+          <input type="radio" name="sexo" id="sexo-f" value="F">
+          <label for="sexo-f">Feminino</label>
+          <input type="radio" name="sexo" id="sexo-outro" value="Outro">
+          <label for="sexo-outro">Outro / prefiro não informar</label>
+
+          <br><br>
+
+          <label for="dtnas"><span class="bolder">Data de nascimento:</span></label><br>
+          <input type="date" name="dtnas" id="dtnas" autocomplete="bday">
+
+          <br><br>
+
+          <label for="email"><span class="bolder">E-mail:</span></label><br>
+          <input type="email" name="email" id="email" autocomplete="email" required>
+
+          <br><br>
+
+          <label for="senha"><span class="bolder">Senha:</span></label><br>
+          <input type="password" name="senha" id="senha" minlength="8" autocomplete="new-password" required>
+          <p class="italic">Use pelo menos 8 caracteres para criar sua senha.</p>
+
+          <br>
+
+          <input type="submit" value="Enviar cadastro">
+        </form>
+      </section>
+
+      <section aria-labelledby="titulo-opiniao">
+        <div class="titulo">
+          <h3 id="titulo-opiniao">Opinião sobre o título</h3>
+        </div>
+
+        <p class="italic">Compartilhe sua opinião sobre a campanha do Corinthians.</p>
+
+        <form action="#" method="get">
+          <label for="men"><span class="bolder">Conte um pouco sobre o título:</span></label><br>
+          <textarea name="men" id="men" placeholder="Escreva sua opinião aqui..."></textarea>
+
+          <br><br>
+
+          <label for="time"><span class="bolder">Time mais difícil:</span></label><br>
+          <input type="text" name="time" id="time" placeholder="Ex.: Vasco">
+
+          <br><br>
+
+          <label for="jgd"><span class="bolder">Melhor jogador:</span></label><br>
+          <input type="text" name="jgd" id="jgd" placeholder="Ex.: Garro">
+
+          <br><br>
+
+          <label for="pior"><span class="bolder">Jogador que mais decepcionou:</span></label><br>
+          <input type="text" name="pior" id="pior" placeholder="Ex.: nome do jogador">
+
+          <br><br>
+
+          <label for="mom"><span class="bolder">Momento mais inesquecível:</span></label><br>
+          <input type="text" name="mom" id="mom" placeholder="Um momento do jogo">
+
+          <br><br>
+
+          <label for="nota"><span class="bolder">Nota para a campanha (de 0 a 10):</span></label><br>
+          <input type="number" name="nota" id="nota" min="0" max="10">
+
+          <br><br>
+
+          <input type="submit" value="Enviar opinião">
+        </form>
+      </section>
+
+      <section aria-labelledby="dicas">
+        <div class="titulo">
+          <h3 id="dicas">Antes de enviar</h3>
+        </div>
+        <ul class="marker">
+          <li>Confira se seu nome e e-mail estão corretos.</li>
+          <li>Não compartilhe sua senha com outras pessoas.</li>
+          <li class="italic">Responda à parte de opinião apenas se quiser compartilhar suas ideias.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

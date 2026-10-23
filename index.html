@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="escudo_corithians.png">
+
+  <title>Corinthians — Copa do Brasil 2025</title>
+
+  <!--CSS-->
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', 'Trebuchet MS', sans-serif;
+      background-color: #f0f0f0;
+      min-height: 100vh;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 8px 16px;
+      background-color: #000;
+      color: #fff;
+      border-bottom: 5px solid #3b3b35;
+    }
+
+    header img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      flex-shrink: 0;
+      transition: transform 0.5s ease;
+    }
+
+    header img:hover {
+      transform: rotate(180deg);
+    }
+
+    header h2 {
+      margin: 0 12px;
+    }
+
+    header p {
+      font-size: 30px;
+    }
+
+    .link {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 8px 12px;
+    }
+
+    .link a {
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.25s ease;
+    }
+
+    .link a:hover,
+    .link a:focus-visible {
+      text-decoration: underline;
+      color: #bebebe;
+    }
+
+    main {
+      width: min(100% - 24px, 900px);
+      margin: 20px auto;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    main h1 {
+      margin: 8px 0;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    main p {
+      text-align: justify;
+      padding: 16px;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    main img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .conteudo {
+      width: 100%;
+      max-width: 750px;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.25) 0 5px 15px;
+      border-radius: 5px;
+    }
+
+    .img {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .principal {
+      width: 100%;
+      height: auto;
+    }
+
+    .img p {
+      padding: 8px;
+    }
+
+    .titulo {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: 40px;
+      margin-top: 12px;
+      padding: 6px 10px;
+      background-color: #dbdbdb;
+      border-bottom: 2px solid #6e6e6e;
+    }
+
+    .titulo h4 {
+      margin: 0;
+    }
+
+    ul {
+      padding-left: 30px;
+    }
+
+    ul li {
+      margin: 8px 4px;
+      padding: 4px;
+    }
+
+    .marker li::marker {
+      color: #f10101;
+      font-weight: 700;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px auto;
+    }
+
+    table img {
+      width: 80px;
+      max-width: 100%;
+    }
+
+    th, td {
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #777;
+    }
+
+    .cor {
+      background-color: rgba(230, 230, 171, 0.8);
+    }
+
+    .bolder {
+      font-weight: 700;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .estatistca {
+      width: 100%;
+      max-width: 710px;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      height: 450px;
+      margin: 20px auto;
+      border: 0;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        position: relative;
+        flex-direction: column;
+      }
+
+      header h2 {
+        margin: 4px;
+      }
+
+      .link {
+        margin: 8px 0;
+      }
+
+      main {
+        width: 100%;
+        margin: 10px auto;
+        padding: 8px;
+      }
+
+      .conteudo {
+        margin: 12px auto;
+        padding: 8px;
+      }
+
+      main p {
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      .titulo {
+        min-height: 36px;
+      }
+
+      table {
+        font-size: 13px;
+      }
+
+      th, td {
+        padding: 6px;
+      }
+
+      iframe {
+        height: 320px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!--Cabeçalho-->
+
+  <header>
+
+    <img src="escudo_corithians.png" alt="Escudo do corinthians">
+
+    <h2>Corigão</h2>
+
+    <p style="font-size: 30px;">|</p>
+
+    <div class="link">
+
+      <a href="index.html">Início</a>
+
+      <a href="#tra">Trajetória</a>
+
+      <a href="#art">Artilharia</a>
+
+      <a href="#es">Estatística</a>
+
+      <a href="cadastro.html">Cadastro</a>
+
+    </div>
+
+  </header>
+
+  <!--Contéudo da página-->
+
+  <main>
+
+    <h1>Copa Do Brasil 2025</h1>
+
+    <div class="conteudo" align="center">
+
+      <!--__________________________________________________________________APRESENTADO_____________________________________________________________________-->
+
+      <div class="img">
+
+        <img class="principal" src="copa_do_brasil_2025.jpg" alt="Corinthians Erguendo o trofeu da copa do brasil de 2025">
+
+        <figcaption>
+
+          <small>
+
+            <p align="left">Corinthians campeão da Copa do Brasil de 2025</p>
+
+          </small>
+
+        </figcaption>
+
+      </div>
+
+      <br>
+
+      <p><b>O Corinthians conquistou o tetracampeonato da Copa do Brasil no dia 21 de dezembro de 2025</b>, 
+
+        depois de uma tarde de emoções no Maracanã. A equipe alvinegra já havia encerrado todas as outras competições de disputa no ano. <br>
+
+        <br>Este título findou um jejum de oito temporadas em relação às taças nacionais, já que a última havia sido a do Campeonato Brasileiro de 2017. Em relação à própria Copa, o 
+
+        Timão faturou o torneio em 1995, 2002 e 2009, além deste último em 2025. <br>
+
+        <br>Nesta edição, o Corinthians iniciou a competição na terceira fase, válida como 16 avos de final. Ao todo, tiveram 92 equipes participantes em busca da glória. Ao todo,
+
+        o clube do Parque São Jorge assegurou um faturamento total de R$ 97,791 milhões na disputa, sendo R$ 77,175 milhões destes os garantidos pela taça. Um feito raro ainda
+
+        foi alcançado: comandados por Dorival Júnior, os jogadores alvinegros venceram todos os duelos fora de casa. <br>
+
+        <br>Além da quantidade de participantes e do lucro obtido, a grandiosidade do título se passa pela maneira na qual o Timão garantiu o direito de disputa da Copa do Brasil de 
+
+        2025. Em meados de 2024, <span class="italic">dados estatísticos de universidades apontavam 0,04% de chance de a equipe corinthiana entrar na disputa da Copa do Brasil</span>. Isso porque, pela
+
+        eliminação precoce no Paulista daquele ano, o time alvinegro teria que se classificar à Libertadores para garantir uma vaga. <br>
+
+        <br>Após uma arrancada histórica de nove vitórias consecutivas no Campeonato Brasileiro de 2024, o time zarpou da zona de rebaixamento e se classificou à pré-Libertadores,
+
+        ganhando o direito de também disputar a Copa do Brasil em 2025. Apesar da eliminação precoce na copa internacional, a nova temporada
+
+        guardaria um momento de redenção no final do ano.</p>
+
+        <div class="titulo">
+
+          <h4 align="left">Terceira Fase</h4>
+
+        </div>
+
+        <br>
+
+        <img src="terceira_fase.jpg" alt="yuri alberto batendo no gol para abrir o placar na terceira fase">
+
+        <br>
+
+        <p>Por ter participado da Libertadores, o Corinthians estreou diretamente na terceira fase da competição. O primeiro desafio foi diante do Grêmio Novorizontino, de Novorizonte, no interior de São Paulo. 
+
+          Coincidentemente, a estreia da equipe no torneio também marcaria a estreia de Dorival Júnior no comando técnico da equipe. <br>
+
+          <br>O Timão vinha de uma sequência longa (e estressante) de jogos, com direito a uma goleada por 4 a 0 sofrida contra o Flamengo. O novo técnico decidiu 
+
+          poupar os titulares no jogo de ida diante do rival interiorano,no dia 30 de abril. <span class="bolder">No Jorjão, ambas as equipes fizeram um jogo morno, mas os corinthianos 
+
+          venceram a partida por 1 a 0 com gol de Héctor Hernández.</span> <br>
+
+          <br>Na volta, dentro da Neo Química Arena, no dia 21 de maio, a equipe alvinegra tinha a missão de segurar, ao menos, um empate para garantir a classificação. O jogo, novamente,
+
+          não apresentou grande espetáculo. <b>Na reta final do segundo tempo, Yuri Alberto cortou a marcação dentro da área e finalizou de esquerda para garantir um novo 1 a 0.</b>
+
+        </p>
+
+        <div class="titulo">
+
+          <h4>Oitavas de final</h4>
+
+        </div>
+
+        <br>
+
+        <div class="img">
+
+          <img src="oitava.jpg" alt="Matheus bidu encarado o jogador do palmeiras">
+
+          <figcaption>
+
+            <small>
+
+              <p>Matheus Bidu encarando os jogadores do Palmeiras no Dérbi pela Copa do Brasil</p>
+
+            </small>
+
+          </figcaption>
+
+        </div>
+
+        <p>Na sequência, entre julho e agosto, o caminho colocou frente a frente Corinthians e Palmeiras, o maior rival, com a decisão fora de casa. O confronto marcaria o primeiro Dérbi da história da Copa do Brasil.
+
+          As equipes estavam em momentos distintos, com o rival brigando por taça na Libertadores e no Campeonato Brasileiro, enquanto o Timão ainda oscilava na temporada. <br>
+
+          <br>Mesmo com o favoritismo apontado para o outro lado, o Timão mostrou sua força. <b>A ida, na Neo Química Arena, destinou uma vitória suada por 1 a 0</b>. Na ocasião,
+
+          Matheuzinho cruzou dentro da área e Memphis Depay marcou de cabeça para a explosão da Fiel. O adversário pressionou por um empate, mas não conseguiu. <br>
+
+          <br>O clássico ascendeu a confiança do Corinthians. A volta estava marcada no Allianz Parque, no dia 30 de julho. Dorival armou uma equipe defensiva, mas Aníbal, do Palmeiras,
+
+          foi expulso aos 11 minutos do primeiro tempo após cair na pilha de José Martínez. O Timão aproveitou a brecha para marcar o primeiro gol na cabeça de Gustavo Henrique.
+
+          <b>Em um segundo tempo mais tranquilo, Matheus Bidu ainda aproveitaria a sobra dentro da área para fechar a conta por 2 a 0</b>. A equipe desacreditada estava nas quartas de final.
+
+        </p>
+
+        <div class="titulo">
+
+          <h4>Quartas de final</h4>
+
+        </div>
+
+        <br>
+
+        <div class="img">
+
+          <img src="quarta.jpg" alt="Corinthians vence o Athletico-PR pela Copa do Brasil">
+
+          <figcaption>
+
+            <small><p>Corinthians vence o Athletico-PR pela Copa do Brasil</p></small>
+
+          </figcaption>
+
+        </div>
+
+        <p>Já nas quartas de final, disputadas entre agosto e setembro, o adversário foi o Athletico Paranaense. Mesmo na Série B, o time do Paraná vinha embalado,
+
+          em uma crescente na retomada rumo à elite e confiante após eliminar o São Paulo na fase anterior.
+
+          O Timão, por sua vez, enfrentava uma crise de lesões de seus principais jogadores e bastidores conturbados fora do campo. Uma jovem estrela brilhou, porém. <br>
+
+          <br>Com desfalques de Yuri Alberto e Memphis, o técnico armou uma dupla da base para o confronto de ida diante do Athletico, no dia 27 de agosto. Kayke e Gui Negão,
+
+          que já haviam mostrado serviço no Campeonato Brasileiro, foram os escolhidos. <b>Com muita personalidade, a equipe alvinegra foi melhor que o rival em plena Arena da
+
+          Baixada e garantiu um triunfo por 1 a 0 com gol de Gui e nova assistência de Matheuzinho.</b> <br>
+
+          <br>Na volta, a estrela voltaria a brilhar. Mais tranquilo no jogo, dentro da Neo Química Arena, no dia 10 de setembro, o Timão abriu o
+
+          placar com Rodrigo Garro e assistência de Gui Negão. Depois,a jovem promessa ainda aproveitaria um bate e rebate dentro da área
+
+          para fuzilar a rede mais uma vez. <b>O placar de 2 a 0 destinou a classificação do Timão à semifinal.</b>
+
+        </p>
+
+        <div class="titulo">
+
+          <h4>Semifinal</h4>
+
+        </div>
+
+        <br>
+
+        <div class="img">
+
+          <img src="semifinal.jpg" alt="Breno bidon contra o cruzeiro">
+
+          <figcaption>
+
+            <small><p>Breno Bidon na semifinal da Copa do Brasil contra o Cruzeiro</p></small>
+
+          </figcaption>
+
+        </div>
+
+        <p>As semifinais aconteceram somente no início de dezembro, após o término do Brasileirão. O Corinthians tinha como adversário, desta vez,
+
+          o Cruzeiro, o mesmo time que havia batido o Timão por 3 a 0 na competição de pontos corridos. <br>
+
+          <br>Novamente como franco-atiradora, a equipe de Dorival Júnior entrou no Mineirão lotado no dia 10 de dezembro e o calou. <b>Memphis aproveitou cruzamento na área para desviar de
+
+          cabeça, depois de pé, e fazer o 1 a 0.</b> A Fiel, presente em Belo Horizonte, deixou a torcida do Cruzeiro sem palavras no estádio mineiro. <br>
+
+          <br>A confiança para a volta foi uma armadilha, porém. Dentro da Neo Química Arena, no dia 14, o Cruzeiro abriu 2 a 0 logo no começo da segunda etapa.
+
+          O Timão não desistiu do duelo. Depois do apagão inicial, a equipe foi com tudo no ataque e chegou a um tento com Matheus Bidu. O placar agregado mostrou 2 a 2, então, a partida foi aos pênaltis. <br>
+
+          <br>De um lado, Hugo Souza, do Corinthians, vivia grande fase, sendo a esperança dos corinthianos na decisão.
+
+          Do outro lado, Cássio, do Cruzeiro, enfrentaria a equipe que é ídolo. <br>
+
+          <br>Yuri Alberto errou a primeira cobrança, chutando a bola nas mãos do Gigante. A disputa seguiu com todos os batedores, de ambos os times, fazendo os tentos. Memphis,
+
+          Rodrigo Garro, Vitinho e Gustavo Henrique converteram pelo lado do Corinthians nesta fase inicial. Na quinta cobrança do Cruzeiro, que selaria a vaga do time mineiro,
+
+          Gabriel Barbosa foi surpreendido por Hugo Souza, que deu a chance do Timão seguir vivo às alternadas. <br>
+
+          <br>Na primeira das alternadas, o goleiro corinthiano voou para defender nova bola de Wallace. <b>Com muita personalidade, Breno Bidon pegou a bola do </b><i>match point</i><b> e colocou o
+
+          Corinthians na final.</b>
+
+        </p>
+
+        <div class="titulo">
+
+          <h4>Final</h4>
+
+        </div>
+
+        <br>
+
+        <div class="img">
+
+          <a href="https://www.youtube.com/watch?v=Ltv68C4FKOM" target="_blank"><img src="final.jpg" alt="yuri alberto abrindo o placar para o corinthians na final da copa do brasil de 2025"></a>
+
+          <figcaption>
+
+            <small><p>Yuri Alberto marca o primeiro gol do Corinthians em final contra o Vasco</p></small>
+
+          </figcaption>
+
+        </div>
+
+        <p>Por fim, a grande final foi contra o Vasco da Gama. Depois dos percalços, o Corinthians chegava bem para a partida. No entanto,
+
+          o time carioca vinha também de uma grande classificação no clássico contra o Fluminense na semifinal. <br>
+
+          <br>O primeiro duelo estava marcado na Neo Química Arena. No dia 17 de dezembro, o Timão decepcionou a torcida. Com uma postura pouco agressiva, praticamente, não saíram
+
+          finalizações ao gol. Rayan, para o Vasco, e Memphis, para o Corinthians, fizeram tentos impedidos. <b>O placar final ficou em 0 a 0.</b> <br>
+
+          <br><b>A decisão ficou toda para o duelo no Maracanã</b>, no Rio de Janeiro, durante a noite do dia 21, um domingo de calor. Nas arquibancadas,
+
+          estavam presentes cerca de cinco mil corinthianos, frente a mais de 60 mil vascaínos. Mas a festa foi da Fiel. <br>
+
+          <br>Na primeira etapa, <u>o Timão surpreendeu o adversário e inaugurou o marcador com Yuri Alberto aos 17 minutos de jogo.</u> O atacante recebeu lançamento
+
+          de Matheuzinho, dominou dentro da área e deu um toque sutil para vencer o goleiro do Vasco, Léo Jardim.
+
+          Mas os mandantes chegaram ao empate com Nuno Moreira em um momento de pressão. <br>
+
+          <br>  A glória foi registrada no segundo tempo. Breno Bidon, com muita classe, deixou para trás a marcação de Barros e acionou um contra-golpe do Corinthians, novamente aos 17 minutos. <i>Matheuzinho rolou para Yuri,
+
+          que viu Memphis entrando na pequena área. O camisa 10 holandês foi para a rede com bola e tudo.</i> <b>O 2 a 1 cravou a taça do Timão.</b> <br>
+
+        </p>
+
+        <div class="titulo">
+
+          <h4>A campanha em números</h4>
+
+        </div>
+
+        <p>A campanha alvinegra terminou com dez jogos disputados, oito vitórias, um empate e apenas uma derrota, além de 12 gols marcados e somente três sofridos. O
+
+          principal artilheiro do Corinthians na competição foi Memphis, com três gols, seguido por Gui Negão, Matheus Bidu e Yuri Alberto, todos com dois. Héctor Hernández,
+
+          Gustavo Henrique e Rodrigo Garro também deixaram suas marcas, com um gol cada. <br>
+
+          <br>Coletivamente, a equipe fez dez jogos, com oito vitórias, um empate e uma única derrota. Fora de casa, foram cinco duelos travados com impressionantes
+
+          cinco triunfos conquistados.
+
+        </p>
+
+        <div class="titulo" id="es">
+
+          <h4>Copa do Brasil 2025 é do Corinthians!</h4>
+
+        </div>
+
+        <br>
+
+        <div class="estatistca" >
+
+          <p>O Corinthians iniciou sua trajetória na Copa do Brasil 2025 com grande expectativa da torcida. Durante a competição, o clube apresentou um futebol ofensivo e organizado,
+
+            conquistando importantes vitórias dentro e fora de casa. A campanha contou com grandes atuações dos principais jogadores do elenco e partidas marcantes na Neo Química Arena.<br>
+
+            <br>O Timão terminou a competição com: <br><br>
+
+            8 vitórias <br>
+
+            3 empates <br>
+
+            1 derrota <br>
+
+            22 gols marcados<br>
+
+            9 gols sofridos<br>
+
+            Artilheiro: Yuri Alberto<br><br>
+
+            A torcida teve papel fundamental durante toda a campanha, lotando a Neo Química Arena nos jogos decisivos.<br>
+
+            O Corinthians iniciou sua trajetória na Copa do Brasil 2025 com grande expectativa da torcida. Com uma equipe competitiva e forte apoio da Fiel, o clube buscou avançar nas
+
+            fases eliminatórias com atuações sólidas e muita intensidade dentro de campo.</p>
+
+        </div>
+
+        <div class="titulo" id="tra">
+
+          <h4>Todos os jogos disputados</h4>
+
+        </div>
+
+        <br>
+
+        <ul class="marker">
+
+          <li>Vasco da Gama 1 x 2 Corinthians - 21/12/2025 - Copa do Brasil 2025</li>
+
+          <li>Corinthians 0 x 0 Vasco da Gama - 17/12/2025 - Copa do Brasil 2025</li>
+
+          <li>Corinthians 1 x 2 Cruzeiro - 14/12/2025 - Copa do Brasil 2025</li>
+
+          <li>Cruzeiro 0 x 1 Corinthians - 10/12/2025 - Copa do Brasil 2025</li>
+
+          <li>Corinthians 2 x 0 Athletico-PR - 10/09/2025 - Copa do Brasil 2025</li>
+
+          <li>Athletico-PR 0 x 1 Corinthians - 27/08/2025 - Copa do Brasil 2025</li>
+
+          <li>Palmeiras 0 x 2 Corinthians - 06/08/2025 - Copa do Brasil 2025</li>
+
+          <li>Corinthians 1 x 0 Palmeiras - 30/07/2025 - Copa do Brasil 2025</li>
+
+          <li>Corinthians 1 x 0 Novorizontino - 21/05/2025 - Copa do Brasil 2025</li>
+
+          <li>Novorizontino 0 x 1 Corinthians - 30/04/2025 - Copa do Brasil 2025</li>
+
+        </ul>
+
+        <br>
+
+        <div class="titulo" id="art">
+
+          <h4>Artilharia do Corinthians na Copa do Brasil 2025</h4>
+
+        </div>
+
+        <br>
+
+        <table border="1px" cellpadding="0" cellspacing="0" width="90%" > 
+
+          <tr>
+
+            <td><img src="memphis-depay.jpg" alt=""></td>
+
+            <td>1º - Memphis Depay <br> 3 gols em 8 jogo</td>
+
+          </tr>
+
+          <tr class="cor">
+
+            <td><img src="guilherme.jpg" alt=""></td>
+
+            <td>2º - Gui Negão <br> 2 gols em 2 jogos</td>
+
+          </tr>
+
+          <tr>
+
+            <td><img src="matheus.jpg" alt=""></td>
+
+            <td>2º - Matheus Bidu <br> 2 gols em 8 jogos</td>
+
+          </tr>
+
+          <tr class="cor">
+
+            <td><img src="yuri-alberto.jpg" alt=""></td>
+
+            <td>2º - Yuri Alberto <br> 2 gols em 9 jogos</td>
+
+          </tr>
+
+          <tr>
+
+            <td><img src="hector.jpg" alt=""></td>
+
+            <td>5º - Héctor Hernández <br> 1 gol em 1 jogo</td>
+
+          </tr>
+
+          <tr class="cor">
+
+            <td><img src="gustavo-henrique.jpg" alt=""></td>
+
+            <td>5º - Gustavo Henrique <br> 1 gol em 8 jogos</td>
+
+          </tr>
+
+          <tr>
+
+            <td><img src="rodrigo-garro.jpg" alt=""></td>
+
+            <td>5º - Rodrigo Garro <br> 1 gol em 8 jogos</td>
+
+          </tr>
+
+        </table>
+
+        <br>
+
+        <div class="titulo">
+
+          <h4>Elenco</h4>
+
+        </div>
+
+        <br>
+
+        <ul class="marker">
+
+        <li><strong>Goleiros:</strong>
+
+          <ul class="marker">
+
+            <li>Hugo Souza</li>
+
+            <li>Victor</li>
+
+            <li>Daniel Fuzato</li>
+
+          </ul>
+
+        </li>
+<li><strong>Zagueiros:</strong>
+
+          <ul class="marker">
+
+            <li>André Ramalho</li>
+
+            <li>Gustavo Henrique</li>
+
+            <li>Cacá</li>
+
+            <li>João Pedro</li>
+
+          </ul>
+
+        </li>
+<li><strong>Laterais:</strong>
+
+          <ul class="marker">
+
+            <li>Matheuzinho</li>
+
+            <li>Matheus Bidu</li>
+
+            <li>Fabrizio Angileri</li>
+
+            <li>Dieguinho</li>
+
+          </ul>
+
+        </li>
+<li><strong>Meio-campistas:</strong>
+
+          <ul class="marker">
+
+            <li>José Martínez</li>
+
+            <li>Raniele</li>
+
+            <li>Maycon</li>
+
+            <li>Breno Bidon</li>
+
+            <li>Rodrigo Garro</li>
+
+            <li>André Carrillo</li>
+
+            <li>Alex Santana</li>
+
+            <li>Ryan</li>
+
+            <li>Guilherme</li>
+
+          </ul>
+
+        </li>
+<li><strong>Atacantes:</strong>
+
+          <ul class="marker">
+
+            <li>Yuri Alberto</li>
+
+            <li>Memphis Depay</li>
+
+            <li>Ángel Romero</li>
+
+            <li>Hector Hernández</li>
+
+          </ul>
+
+        </li>
+<li><strong>Comissão Técnica:</strong>
+
+          <ul class="marker">
+
+            <li>Técnico: Dorival Júnior</li>
+
+          </ul>
+
+        </li>
+
+      </ul>
+
+      <br>
+
+      <div class="titulo">
+
+        <h4>Local do Título</h4>
+
+      </div>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7349.96546780659!2d-43.23262010391942!3d-22.914007684749336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x
+
+        997e5bfcef45a7%3A0x3c044ac8f75ca717!2sMaracan%C3%A3%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1780251674129!5m2!1spt-BR!2sbr"
+
+        width="600"
+
+        height="450"
+
+        style="border:0; margin: 20px;"
+
+        allowfullscreen=""
+
+        loading="lazy"
+
+        referrerpolicy="no-referrer-when-downgrade">
+
+      </iframe>
+
+    </div>
+
+  </main>
+
+</body>
+
+</html>
